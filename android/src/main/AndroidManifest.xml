@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.sudeep.pure_spectrum">
+  <uses-permission android:name="android.permission.INTERNET" />
+
+  <application>
+    <activity android:name="com.sudeep.pure_spectrum.PureSpectrumPlugin$FusionCardsActivity" android:exported="false" />
+  </application>
+
+</manifest>
