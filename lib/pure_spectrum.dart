@@ -6,20 +6,20 @@ class PureSpectrum {
   static Future<void> showSurvey({
     required String token,
     required String userId,
-    Map<String, String>? headers,
+    String locale = 'en_US',
     bool verticalAllowed = true,
+    Map<String, String>? headers,
     String? hashedId,
-    String? respondentId, // optional, auto-generated on Android if null
+    String? respondentId,
   }) {
     return channel.invokeMethod('showSurveyCards', {
-      "accessToken": token,
-      "memberId": userId, // userId will be passed as memberId
-      "respondentId":
-          respondentId, // if null → Java side will auto-generate unique
-      "hashedId": hashedId,
-      "locale": "en_US",
-      "headers": headers ?? {},
-      "verticalAllowed": verticalAllowed,
+      'accessToken': token,
+      'memberId': userId,
+      'respondentId': respondentId,
+      'hashedId': hashedId,
+      'locale': locale,
+      'headers': headers ?? {},
+      'verticalAllowed': verticalAllowed,
     });
   }
 }
